@@ -1,0 +1,66 @@
+* {
+  border: 1px solid black !important;
+  box-sizing: border-box;
+}
+
+/*block level elements get the treatment*/
+.header, .footer, .main  {
+    max-width: 80%;
+    margin: auto;
+    padding: .5em;
+  }
+
+/*text elements get the treatment*/
+h1 {
+
+}
+
+h3{
+  font-family: 'Cinzel', serif;
+}
+h4 {
+  font-family: 'Cinzel', serif;
+}
+h5 {
+  font-family: 'Cinzel', serif;
+}
+h6{
+  font-family: 'Cinzel', serif;
+}
+p {
+  line-height: 1.5em;
+  padding: .5em;
+
+}
+
+/*This is the grid system*/
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  vertical-align: middle;
+  margin: auto;
+  align-content: center;
+  margin-bottom: .5em;
+}
+
+.spaceBetween {
+  display: flex;
+  justify-content: space-around;
+}
+.col {
+  flex: 1;
+  padding: .5em;
+}
+
+.col_space {
+  flex: auto;
+  margin-left: .5em;
+  margin-right: .5em;
+  padding: .5em;
+}
+
+/*to center font within different elements*/
+.center {
+  text-align: center;
+}

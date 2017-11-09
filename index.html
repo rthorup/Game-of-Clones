@@ -5,16 +5,29 @@
     <link rel="stylesheet" href="reset.css" />
     <!-- <link rel="stylesheet" href="skeleton.css"/> -->
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
     <title>GOT Framework</title>
   </head>
   <body>
-    <!-- <header class="header">
-      We got a header going on up here.
+    <header class="header targaryen">
       <nav>
-        This is a nav item inside our header.
+        <div class='logo'>Logo</div>
+        <ul>
+          <li class="dropdown">item1
+            <ul>
+              <li>item1</li>
+              <li>item1</li>
+              <li>item1</li>
+            </ul>
+          </li>
+          <li>item2</li>
+          <li>item3</li>
+          <li>item4</li>
+          <li>item5</li>
+        </ul>
       </nav>
-    </header> -->
+    </header>
     <main class="main">
     <h1>Heading One</h1>
     <h2>Heading Two</h2>
@@ -22,66 +35,62 @@
     <h4>Heading Four</h4>
     <h5>Heading Five</h5>
     <h6>Heading Six</h6>
-    <h4>Here is a breakdown of the grid system. Just add a div with the class of 'container' and then each item within can have the class of 'col'.  These will take up an equal amount of space.</h4>
+    <h6 class='center'>The Almighty Grid System</h6>
+    <p>Here is a breakdown of the grid system. The grid system is built with flexbox and the column widths are proportional. Just add a div with the class of 'container'.  If you want each column to be the same size, add the class 'col1' to each item like below.</p>
     <div class="container center">
-      <div class="col">six</div>
-      <div class="col">six</div>
-      <div class="col">six</div>
-      <div class="col">six</div>
-      <div class="col">six</div>
-      <div class="col">six</div>
+      <div class="col1 targaryen">six</div>
+      <div class="col1 targaryen">six</div>
+      <div class="col1 targaryen">six</div>
+      <div class="col1 targaryen">six</div>
+      <div class="col1 targaryen">six</div>
+      <div class="col1 targaryen">six</div>
     </div>
     <div class="container center">
-      <div class="col">five</div>
-      <div class="col">five</div>
-      <div class="col">five</div>
-      <div class="col">five</div>
-      <div class="col">five</div>
+      <div class="col1 targaryen">five</div>
+      <div class="col1 targaryen">five</div>
+      <div class="col1 targaryen">five</div>
+      <div class="col1 targaryen">five</div>
+      <div class="col1 targaryen">five</div>
     </div>
     <div class="container center">
-      <div class="col">four</div>
-      <div class="col">four</div>
-      <div class="col">four</div>
-      <div class="col">four</div>
+      <div class="col1 targaryen">three</div>
+      <div class="col1 targaryen">three</div>
+      <div class="col1 targaryen">three</div>
+    </div>
+    <p>If you want to have columns of varying width, choose between col2 - col8.  Keep in mind that the sizing is proportional so a col4 and col2 would be rougly 66% and 33% like so:
+    <div class="container center">
+      <div class="col4 targaryen">four</div>
+      <div class="col2 targaryen">two</div>
+    </div>
+    <p>Or you could do col2 and col8 for a 20% and 80%.
+    <div class="container center">
+      <div class="col8 targaryen">eight</div>
+      <div class="col2 targaryen">two</div>
+    </div>
+    <p>Again, these are proportional so col8 and col8 would result in a 50%/50%. You get the idea....</p>
+    <p>If you want some gutters around your columns, instead of class of 'col1' use th class of 'col_space1' lke this:</p>
+    <div class="container center">
+      <div class="col1 space targaryen">six</div>
+      <div class="col1 space targaryen">six</div>
+      <div class="col1 space targaryen">six</div>
+      <div class="col1 space targaryen">six</div>
+      <div class="col1 space targaryen">six</div>
+      <div class="col1 space targaryen">six</div>
     </div>
     <div class="container center">
-      <div class="col">three</div>
-      <div class="col">three</div>
-      <div class="col">three</div>
+      <div class="col1 space targaryen">three</div>
+      <div class="col1 space targaryen">three</div>
+      <div class="col1 space targaryen">three</div>
     </div>
     <div class="container center">
-      <div class="col">two</div>
-      <div class="col">two</div>
+      <div class="col1 space targaryen">one</div>
+      <div class="col2 space targaryen">two</div>
+      <div class="col3 space targaryen">three</div>
+      <div class="col4 space targaryen">four</div>
     </div>
     <div class="container center">
-      <div class="col">one</div>
-    </div>
-    <h4>If you want some gutters around your columns, instead of class of 'container' use class of 'spaceBetween' in the parent dive like this:</h4>
-    <div class="container center">
-      <div class="col_space">six</div>
-      <div class="col_space">six</div>
-      <div class="col_space">six</div>
-      <div class="col_space">six</div>
-      <div class="col_space">six</div>
-      <div class="col_space">six</div>
-    </div>
-    <div class="container center">
-      <div class="col_space">five</div>
-      <div class="col_space">five</div>
-      <div class="col_space">five</div>
-      <div class="col_space">five</div>
-      <div class="col_space">five</div>
-    </div>
-    <div class="container center">
-      <div class="col_space">four</div>
-      <div class="col_space">four</div>
-      <div class="col_space">four</div>
-      <div class="col_space">four</div>
-    </div>
-    <div class="container center">
-      <div class="col_space">three</div>
-      <div class="col_space">three</div>
-      <div class="col_space">three</div>
+      <div class="col8 space targaryen">four</div>
+      <div class="col2 space targaryen">four</div>
     </div>
     <p>Twee raw denim <a href="#">wayfarers</a>, XOXO four dollar toast vegan helvetica literally swag. Mumblecore stumptown poutine cardigan, kogi keytar occupy plaid meggings beard bitters distillery sartorial aesthetic pitchfork. Pinterest yuccie helvetica, church-key dreamcatcher marfa artisan. Chillwave letterpress church-key gluten-free direct trade keytar squid palo santo. Offal hoodie poutine, banjo whatever meh man braid leggings taxidermy selfies single-origin coffee mlkshk bicycle rights lomo venmo. Cardigan four dollar toast sustainable migas yr. Organic tilde 8-bit, lo-fi sustainable literally keytar dreamcatcher food truck tofu. Wolf lomo hella yuccie chambray tattooed. Viral fanny pack pabst hashtag prism shaman vape asymmetrical. Cornhole enamel pin banh mi iceland offal air plant tofu pour-over chartreuse lumbersexual tousled.</p>
     <p>Drinking vinegar adaptogen organic, plaid celiac chicharrones activated charcoal banjo 8-bit wayfarers. Literally brooklyn forage yuccie banjo letterpress pickled coloring book. Retro chia air plant kombucha. Migas scenester plaid bespoke, sriracha twee small batch gochujang salvia af vape normcore hexagon cliche iceland. Typewriter butcher raw denim occupy, hammock you probably haven't heard of them actually. Skateboard semiotics air plant wolf meggings yr actually kitsch pop-up sriracha copper mug freegan trust fund. Organic farm-to-table mixtape YOLO, tbh intelligentsia butcher gluten-free tumblr activated charcoal microdosing 8-bit. Mixtape lo-fi tote bag, craft beer polaroid pork belly af small batch authentic meditation plaid. Slow-carb ramps fashion axe, actually whatever coloring book swag food truck live-edge viral cloud bread. Stumptown cronut master cleanse godard helvetica PBRB. Narwhal keytar gastropub put a bird on it forage next level you probably haven't heard of them.</p>

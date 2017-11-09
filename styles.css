@@ -1,6 +1,11 @@
 * {
-  border: 1px solid black !important;
+  /*border: 1px solid black !important;*/
   box-sizing: border-box;
+  background-color: #fffcbc;
+}
+@font-face {
+  font-family: 'gameofthrones';
+  src: url('got.ttf');
 }
 
 /*block level elements get the treatment*/
@@ -8,29 +13,129 @@
     max-width: 80%;
     margin: auto;
     padding: .5em;
+    font-family: 'Didact Gothic', sans-serif;
   }
+
+div {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1.25em;
+}
+
+/*header and nav shit*/
+header {
+  min-height: 5em;
+  display: flex;
+}
+
+.logo {
+  flex:1;
+  margin-left: 1em;
+}
+
+nav {
+  flex: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+nav  ul {
+  flex:1;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  flex:1;
+  padding: .5em;
+  text-align: center;
+  border: 2px solid black;
+  height: 100%;
+  text-align: center;
+}
+
+/*dropdown menus from li elements*/
+nav ul li > ul {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  text-align: center;
+}
+
+nav ul li:hover > ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: baseline;
+  flex: 1;
+  justify-content: center;
+  margin-top: .5em;
+  margin-bottom: 0em;
+  list-style-position: inside;
+}
+
+nav ul li ul li {
+  flex: 1;
+  display: flex;
+  position: relative;
+  left: -10px;
+  top: 0;
+  width: 180%;
+}
 
 /*text elements get the treatment*/
 h1 {
+  font-family: 'gameofthrones';
+  font-size: 3em;
+  padding-top: .4em;
+  padding-bottom: .25em;
+  font-weight: 400;
+}
 
+h2 {
+  font-family: 'gameofthrones';
+  font-size: 2.5em;
+  padding-bottom: .25em;
+  padding-top: .4em;
+  font-weight: 400;
 }
 
 h3{
   font-family: 'Cinzel', serif;
+  font-size: 2.75em;
+  font-weight: bold;
+  padding: .20em 0em .10em 0em;
 }
+
 h4 {
   font-family: 'Cinzel', serif;
+  font-size: 2.5em;
+  font-weight: bold;
+  padding: .25em 0em .25em 0em;
 }
+
 h5 {
   font-family: 'Cinzel', serif;
+  font-size: 2.25em;
+  font-weight: bold;
+  padding: .25em 0em .25em 0em;
 }
+
 h6{
   font-family: 'Cinzel', serif;
+  font-size: 2em;
+  font-weight: bold;
+  padding: .25em 0em .25em 0em;
 }
+
 p {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1.25em;
   line-height: 1.5em;
   padding: .5em;
-
 }
 
 /*This is the grid system*/
@@ -48,19 +153,68 @@ p {
   display: flex;
   justify-content: space-around;
 }
-.col {
+.col1 {
   flex: 1;
   padding: .5em;
 }
+.col2 {
+  flex: 2;
+  padding: .5em;
+}
+.col3 {
+  flex: 3;
+  padding: .5em;
+}
+.col4 {
+  flex: 4;
+  padding: .5em;
+}
+.col5 {
+  flex: 5;
+  padding: .5em;
+}
+.col6 {
+  flex: 6;
+  padding: .5em;
+}
+.col7 {
+  flex: 7;
+  padding: .5em;
+}
+.col8 {
+  flex: 8;
+  padding: .5em;
+}
 
-.col_space {
-  flex: auto;
+.col_space1 {
+  flex: 1;
   margin-left: .5em;
   margin-right: .5em;
   padding: .5em;
 }
 
+.space {
+  margin-left: .5em;
+  margin-right: .5em;
+  padding: .5em;
+}
+
+
 /*to center font within different elements*/
 .center {
   text-align: center;
+}
+
+/*color system for targaryen*/
+.targaryen {
+  background-color: #C9381F;
+  color: #090404;
+  /*border-color: #A07875 !important;*/
+  border: 2px solid black;
+}
+
+.targaryen:hover {
+  background-color: #661C15;
+  color: #A07875;
+  /*border-color: #A07875;*/
 }

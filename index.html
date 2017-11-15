@@ -7,96 +7,121 @@
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
-    <title>GOT Framework</title>
+    <title>Game of Clones Framework</title>
   </head>
   <body>
-    <header class="header">
-      <nav>
-        <div class='logo'>Logo</div>
-        <div class='rightNav'>
-          <div class='dropDown navItem'>Item1</div>
-            <div class='dropNav'>
-              the fuck
-            </div>
-          <div class='dropDown navItem'>Item1</div>
-          <div class='dropDown navItem'>Item1</div>
-          <div class='dropDown navItem'>Item1</div>
-          <div class='dropDown navItem'>Item1</div>
-        </div>
+      <nav class="stark">
+        <div class='col5 stark'>Logo</div>
+          <div class='col1 targaryen targaryenHover'>Item1</div>
+          <div class='col1 tyrell tyrellHover'>Item2</div>
+          <div class='col1 martell martellHover'>Item3</div>
+          <div class='col1 greyjoy greyjoyHover'>Item4</div>
+          <div class='col1 lannister lannisterHover'>Item5</div>
       </nav>
-    </header>
+
+<!--
+      <div class='dropNav'>
+        <div class='dropDownItem navItem stark starkHover'>Drop Item 1</div>
+        <div class='dropDownItem navItem stark starkHover'>Drop Item 2</div>
+        <div class='dropDownItem navItem stark starkHover'>Drop Item 3</div>
+      </div> -->
     <main class="main">
-      <h6 class="center targaryen">Hear Ye! Hear Ye!</h6>
-      <p>This here CSS framework is based off of the flexbox model.  If you don't know what that is, find another framework.  But really, just look it up.  Almost all the elements need to be wrapped in divs and given class names in order to display correctly on the page.  Let us begin our Epic Quest of Understanding! Pay attention and you just might learn something.</p>
+      <h4 class="center">Hear Ye! Hear Ye!</h4>
+      <p>This here CSS framework with a Game of Thrones vibe.  All fonts and colors are meant to give a real Westeros feel.  The following is a brief intro in how to use this stylesheet.  Let us begin our Epic Quest of Understanding!</p>
+
+      <h4 class='underline'>Page elements</h4>
+      <p>The main elements provided are the nav, main, and footer. Anything included in the nav element will be fixed to the top of the page like above. Also, the nav and footer elements are already set up in the flex system so see the grid guidelines below to figure out how they work.</p>
+      <p>The main element gives some styles to the page including the width. Include all of your elements inside the main tags to get the stylings that this page has.</p>
+      <h4 class='underline'>House Colors</h4>
+      <p>There are seven color schemes built in for the seven kingdoms: Targaryen, Stark, Lannister, Baratheon, Greyjoy, Tyrell and Martell.  In order to use the pre-set color scheme, simply add the lowercase family name to the element.  So a div with a class of 'targaryen would look like this:</p>
+      <div class='targaryen'>
+        <h6 class='center'>House Targaryen</h6>
+      </div>
+      <p>And a div with a class of 'tyrell' would end up looking like this:</p>
+      <div class='tyrell'>
+        <h6 class='center'>House Tyrell</h6>
+      </div>
+      <p>But wait! There's more!  Each house also has preset hover rules.  So any element you want to change on hover, such as a nav bar item or button, you can add an additional class of the family name + Hover.  So in our previous example we could add a class 'targaryenHover' and 'tyrellHover' to get the desired effect. You can see how each hose looks below</p>
+      <div class='container'>
+        <p class='col1 targaryen targaryenHover center'>Targaryen</p>
+        <p class='col1 stark starkHover center'>Stark</p>
+        <p class='col1 baratheon baratheonHover center'>Baratheon</p>
+        <p class='col1 tyrell tyrellHover center'>Tyrell</p>
+        <p class='col1 greyjoy greyjoyHover center'>Greyjoy</p>
+        <p class='col1 lannister lannisterHover center'>Lannister</p>
+        <p class='col1 martell martellHover center'>Martell</p>
+      </div>
       <br></br>
-      <h6 class="center targaryen">Ye Olde Headings</h6>
+      <h4 class='underline'>The Almighty Grid System</h4>
+      <p>This framework is based off of the flexbox model.  If you don't know what that is, find another framework.  But really, just look it up.  Almost all the elements need to be wrapped in divs and given class names in order to display correctly on the page.  Since we use flexbox, the system's column widths are proportional. Just add a div with the class of 'container'.  If you want each column to be the same size, add the class 'col1' to each item like below.</p>
+      <div class="container center">
+        <div class="col1 stark starkHover">six</div>
+        <div class="col1 stark starkHover">six</div>
+        <div class="col1 stark starkHover">six</div>
+        <div class="col1 stark starkHover">six</div>
+        <div class="col1 stark starkHover">six</div>
+      <div class="col1 stark starkHover">six</div>
+      </div>
+      <div class="container center">
+        <div class="col1 targaryen targaryenHover">five</div>
+        <div class="col1 targaryen targaryenHover">five</div>
+        <div class="col1 targaryen targaryenHoverr">five</div>
+        <div class="col1 targaryen targaryenHover">five</div>
+        <div class="col1 targaryen targaryenHover">five</div>
+      </div>
+      <div class="container center">
+        <div class="col1 tyrell tyrellHover">three</div>
+        <div class="col1 tyrell tyrellHover">three</div>
+        <div class="col1 tyrell tyrellHover">three</div>
+      </div>
+      <p>If you want to have columns of varying width, choose between col2 - col8.  Keep in mind that the sizing is proportional so a col4 and col2 would be rougly 66% and 33% like so:
+      <div class="container center">
+        <div class="col4 baratheon baratheonHover">four</div>
+        <div class="col2 baratheon baratheonHover">two</div>
+      </div>
+      <p>Or you could do col8 and col2 for a 20% and 80%.
+      <div class="container center">
+        <div class="col8 lannister lannisterHover">eight</div>
+        <div class="col2 lannister lannisterHover">two</div>
+      </div>
+      <p>Again, these are proportional so col8 and col8 would result in a 50%/50%. You get the idea....</p>
+      <h4>Gutters</h4>
+      <p>If you want some gutters around your columns add a special class of 'space' so it will look like this:</p>
+      <div class="container center">
+        <div class="col1 space greyjoy greyjoyHover">six</div>
+        <div class="col1 space greyjoy greyjoyHover">six</div>
+        <div class="col1 space greyjoy greyjoyHover">six</div>
+        <div class="col1 space greyjoy greyjoyHover">six</div>
+        <div class="col1 space greyjoy greyjoyHover">six</div>
+        <div class="col1 space greyjoy greyjoyHover">six</div>
+      </div>
+      <div class="container center">
+        <div class="col1 space greyjoy greyjoyHover">three</div>
+        <div class="col1 space greyjoy greyjoyHover">three</div>
+        <div class="col1 space greyjoy greyjoyHover">three</div>
+      </div>
+      <div class="container center">
+        <div class="col1 space greyjoy greyjoyHover">one</div>
+        <div class="col2 space greyjoy greyjoyHover">two</div>
+        <div class="col3 space greyjoy greyjoyHover">three</div>
+        <div class="col4 space greyjoy greyjoyHover">four</div>
+      </div>
+      <div class="container center">
+        <div class="col8 space greyjoy greyjoyHover">four</div>
+        <div class="col2 space greyjoy greyjoyHover">four</div>
+      </div>
+      <br></br>
+      <h4 class='underline'>Ye Olde Headings and fonts</h6>
+      <p> The H1 and H2 headings are 'Game of Thrones' font created by Charlie Samways.  Free for personal use but contact him if you want to use it in any other project.  The rest of the headings are 'Cinzel' bold and the main text for the page is in 'Diadact Gothic'. Below is some demonstrations on how they all look. Nothing speclail needs to be added.</p>
       <h1>Heading One</h1>
       <h2>Heading Two</h2>
       <h3>Heading Three</h3>
       <h4>Heading Four</h4>
       <h5>Heading Five</h5>
       <h6>Heading Six</h6>
-      <h6 class='center'>The Almighty Grid System</h6>
-      <p>Here is a breakdown of the grid system. The grid system is built with flexbox and the column widths are proportional. Just add a div with the class of 'container'.  If you want each column to be the same size, add the class 'col1' to each item like below.</p>
-      <div class="container center">
-        <div class="col1 targaryen targaryenHover">six</div>
-        <div class="col1 targaryen targaryenHover">six</div>
-        <div class="col1 targaryen targaryenHover">six</div>
-        <div class="col1 targaryen targaryenHover">six</div>
-        <div class="col1 targaryen targaryenHover">six</div>
-      <div class="col1 targaryen targaryenHover">six</div>
-      </div>
-      <div class="container center">
-        <div class="col1 targaryen targaryenHover">five</div>
-        <div class="col1 targaryen targaryenHover">five</div>
-        <div class="col1 targaryen targaryenHover">five</div>
-        <div class="col1 targaryen targaryenHover">five</div>
-        <div class="col1 targaryen targaryenHover">five</div>
-      </div>
-      <div class="container center">
-        <div class="col1 targaryen targaryenHover">three</div>
-        <div class="col1 targaryen targaryenHover">three</div>
-        <div class="col1 targaryen targaryenHover">three</div>
-      </div>
-      <p>If you want to have columns of varying width, choose between col2 - col8.  Keep in mind that the sizing is proportional so a col4 and col2 would be rougly 66% and 33% like so:
-      <div class="container center">
-        <div class="col4 targaryen targaryenHover">four</div>
-        <div class="col2 targaryen targaryenHover">two</div>
-      </div>
-      <p>Or you could do col8 and col2 for a 20% and 80%.
-      <div class="container center">
-        <div class="col8 targaryen targaryenHover">eight</div>
-        <div class="col2 targaryen targaryenHover">two</div>
-      </div>
-      <p>Again, these are proportional so col8 and col8 would result in a 50%/50%. You get the idea....</p>
-      <h6>Gutters</h6>
-      <p>If you want some gutters around your columns, instead of class of 'col1' use th class of 'col_space1' lke this:</p>
-      <div class="container center">
-        <div class="col1 space targaryen targaryenHover">six</div>
-        <div class="col1 space targaryen targaryenHover">six</div>
-        <div class="col1 space targaryen targaryenHover">six</div>
-        <div class="col1 space targaryen targaryenHover">six</div>
-        <div class="col1 space targaryen targaryenHover">six</div>
-        <div class="col1 space targaryen targaryenHover">six</div>
-      </div>
-      <div class="container center">
-        <div class="col1 space targaryen targaryenHover">three</div>
-        <div class="col1 space targaryen targaryenHover">three</div>
-        <div class="col1 space targaryen targaryenHover">three</div>
-      </div>
-      <div class="container center">
-        <div class="col1 space targaryen targaryenHover">one</div>
-        <div class="col2 space targaryen targaryenHover">two</div>
-        <div class="col3 space targaryen targaryenHover">three</div>
-        <div class="col4 space targaryen targaryenHover">four</div>
-      </div>
-      <div class="container center">
-        <div class="col8 space targaryen targaryenHover">four</div>
-        <div class="col2 space targaryen targaryenHover">four</div>
-      </div>
-      <h6>Example paragraphs</h6>
-      <p>Twee raw denim <a href="#">wayfarers</a>, XOXO four dollar toast vegan helvetica literally swag. Mumblecore stumptown poutine cardigan, kogi keytar occupy plaid meggings beard bitters distillery sartorial aesthetic pitchfork. Pinterest yuccie helvetica, church-key dreamcatcher marfa artisan. Chillwave letterpress church-key gluten-free direct trade keytar squid palo santo. Offal hoodie poutine, banjo whatever meh man braid leggings taxidermy selfies single-origin coffee mlkshk bicycle rights lomo venmo. Cardigan four dollar toast sustainable migas yr. Organic tilde 8-bit, lo-fi sustainable literally keytar dreamcatcher food truck tofu. Wolf lomo hella yuccie chambray tattooed. Viral fanny pack pabst hashtag prism shaman vape asymmetrical. Cornhole enamel pin banh mi iceland offal air plant tofu pour-over chartreuse lumbersexual tousled.</p>
-      <p>Drinking vinegar adaptogen organic, plaid celiac chicharrones activated charcoal banjo 8-bit wayfarers. Literally brooklyn forage yuccie banjo letterpress pickled coloring book. Retro chia air plant kombucha. Migas scenester plaid bespoke, sriracha twee small batch gochujang salvia af vape normcore hexagon cliche iceland. Typewriter butcher raw denim occupy, hammock you probably haven't heard of them actually. Skateboard semiotics air plant wolf meggings yr actually kitsch pop-up sriracha copper mug freegan trust fund. Organic farm-to-table mixtape YOLO, tbh intelligentsia butcher gluten-free tumblr activated charcoal microdosing 8-bit. Mixtape lo-fi tote bag, craft beer polaroid pork belly af small batch authentic meditation plaid. Slow-carb ramps fashion axe, actually whatever coloring book swag food truck live-edge viral cloud bread. Stumptown cronut master cleanse godard helvetica PBRB. Narwhal keytar gastropub put a bird on it forage next level you probably haven't heard of them.</p>
+      <br></br>
+      <h4 class='underline'>Example paragraphs and text elements</h6>
+      <p>Twee raw denim <a class='tarygaryen'href="#">wayfarers</a>, XOXO four dollar toast vegan helvetica literally swag. Mumblecore stumptown poutine cardigan, kogi keytar occupy plaid meggings beard bitters distillery sartorial aesthetic pitchfork. Pinterest yuccie helvetica, church-key dreamcatcher marfa artisan. Chillwave letterpress church-key gluten-free direct trade keytar squid palo santo. Offal hoodie poutine, banjo whatever meh man braid leggings taxidermy selfies single-origin coffee mlkshk bicycle rights lomo venmo. Cardigan four dollar toast sustainable migas yr. Organic tilde 8-bit, lo-fi sustainable literally keytar dreamcatcher food truck tofu. Wolf lomo hella yuccie chambray tattooed. Viral fanny pack pabst hashtag prism shaman vape asymmetrical. Cornhole enamel pin banh mi iceland offal air plant tofu pour-over chartreuse lumbersexual tousled.</p>
       <ul>
         <li>List item one</li>
         <li>List item two</li>
@@ -107,40 +132,51 @@
         <li>List item two</li>
         <li>List item three</li>
       </ol>
-      <div>
         <h2>Section Title</h2>
         <h3>Section subtitle</h3>
-        <p>Section description Intelligentsia mustache umami, YOLO migas freegan austin adaptogen forage hexagon 3 wolf moon thundercats fanny pack venmo. Leggings migas pabst, semiotics cray iPhone hammock. Kombucha af messenger bag man braid tumeric asymmetrical vape gluten-free narwhal portland pabst fanny pack jean shorts franzen. Jean shorts ugh truffaut next level cloud bread roof party.</p>
-      </div>
-      <div>
+        <p>Intelligentsia mustache umami, YOLO migas freegan austin adaptogen forage hexagon 3 wolf moon thundercats fanny pack venmo. Leggings migas pabst, semiotics cray iPhone hammock. Kombucha af messenger bag man braid tumeric asymmetrical vape gluten-free narwhal portland pabst fanny pack jean shorts franzen. Jean shorts ugh truffaut next level cloud bread roof party.</p>
         <h2>Section Title</h2>
         <h3>Section subtitle</h3>
-        <p>Section description Trust fund vinyl semiotics sustainable cred swag YOLO selvage humblebrag pinterest try-hard. Authentic cronut subway tile lomo knausgaard vaporware. Offal locavore waistcoat, dreamcatcher yr gluten-free subway tile crucifix pop-up distillery asymmetrical cronut brooklyn. Pok pok keytar shaman pitchfork selvage. Tattooed kogi forage unicorn.</p>
-      </div>
+        <p>Trust fund vinyl semiotics sustainable cred swag YOLO selvage humblebrag pinterest try-hard. Authentic cronut subway tile lomo knausgaard vaporware. Offal locavore waistcoat, dreamcatcher yr gluten-free subway tile crucifix pop-up distillery asymmetrical cronut brooklyn. Pok pok keytar shaman pitchfork selvage. Tattooed kogi forage unicorn.</p>
+        <div>
+          <h4 class='underline'>Blockquotes</h4>
+        </div>
+        <p>Blockquotes don't need anything special except to use the normal blockquote tags.  Looks like this:
       <blockquote cite="http://www.worldwildlife.org/who/index.html">For 50 years, WWF has been protecting the future of nature.
   The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</blockquote>
-      <form class="targaryen">
+      <div>
+        <h4 class='underline'>Forms, fields, labels, inputs and such</h4>
+      </div>
+      <p>The form element is preset with a width of 80%.  You can override that if you want but who wants full page fields?  The labels and inputs are set up on the flexbox model as well so please put your label and input inside a parent div with the class name of 'formParent'.  This will give your elements a nice clean look like below.
+      <form class="stark">
         <fieldset>
-          <legend>Form Fields</legend>
-          <div class="formParent"><label for="text-input">Text input</label> <input id="text-input" type="text"></div>
-          <div class="formParent"><label for="text-input-placeholder">Text input with placeholder</label> <input id="text-input-placeholder" type="text" placeholder="I'm placeholder text"></div>
-          <div class="formParent"><label for="required-input">Required input <span class="required">*</span></label> <input id="required-input" type="text" required aria-required="true"></div>
-          <div class="formParent"><label for="email-input">Email input</label> <input id="email-input" type="email"></div>
-          <div class="formParent"><label for="password-input">Password input</label> <input id="password-input" type="password" value="password"></div>
-          <div class="formParent"><label for="select-field">Select field</label> <select id="select-field"><option selected="selected">Option 01</option><option>Option 02</option></select></div>
-          <div class="formParent"><label for="radio-input"><input id="radio-input" type="radio" name="rad"> Radio input</label></div>
-          <div class="formParent"><label for="checkbox-input"><input id="checkbox-input" type="checkbox"> Checkbox input</label></div>
-          <div class="formParent"><label for="textarea">Textarea</label> <textarea id="textarea" cols="30" rows="5" >Textarea text</textarea></div>
+          <legend class="stark">Form Fields</legend>
+          <div class="formParent stark"><label for="text-input">Text input</label> <input id="text-input" type="text"></div>
+          <div class="formParent stark"><label for="text-input-placeholder">Text input with placeholder</label> <input id="text-input-placeholder" type="text" placeholder="I'm placeholder text"></div>
+          <div class="formParent stark"><label for="required-input">Required input</label> <input id="required-input" type="text" required aria-required="true"></div>
+          <div class="formParent stark"><label for="email-input">Email input</label> <input id="email-input" type="email"></div>
+          <div class="formParent stark"><label for="password-input">Password input</label> <input id="password-input" type="password" value="password"></div>
+          <div class="formParent stark"><label for="select-field">Select field</label> <select id="select-field"><option selected="selected">Option 01</option><option>Option 02</option></select></div>
+          <div class="formParent stark"><label for="radio-input"><input id="radio-input" type="radio" name="rad"> Radio input</label></div>
+          <div class="formParent stark"><label for="checkbox-input"><input id="checkbox-input" type="checkbox"> Checkbox input</label></div>
+          <div class="formParent stark"><label for="textarea">Textarea</label> <textarea id="textarea" cols="30" rows="5" >Textarea text</textarea></div>
         </fieldset>
-        <input type="submit" value="Submit form">
+        <input type="submit" class="stark starkHover" value="Submit form">
       </form>
-
-      <button class="targaryen targaryenHover">Button1</button> <button>Button2</button> <button>Button3</button>
+      <br></br>
+      <h4 class='underline'>Buttons</h4>
+      <p>There are three different sized buttons you can use in this framework: small, meduium and large.  In order to get the following styles, add the class of 'smallButt', 'mediumButt', or 'largeButt'.</p>
+      <div class="buttonDisplay">
+      <button class="smallButt targaryen targaryenHover">Small Button</button> <button class="mediumButt targaryen targaryenHover">Medium Button</button> <button class="largeButt targaryen targaryenHover">Large Button</button>
+      </div>
+      <br></br>
+      <h4 class='underline'>Tables</h4>
+      <p>Tables come pre-stylized as well. Nothing special needs to be added.
       <table>
-        <tr class="targaryen">
-          <th class="targaryen">Company</th>
-          <th class="targaryen">Contact</th>
-          <th class="targaryen">Country</th>
+        <tr class="lannister">
+          <th class="lannister">Company</th>
+          <th class="lannister">Contact</th>
+          <th class="lannister">Country</th>
         </tr>
         <tr>
           <td>Alfreds Futterkiste</td>
@@ -174,11 +210,9 @@
         </tr>
       </table>
     </main>
-    <footer class="footer">
-      <div class=footerDiv>
+    <footer class="footer baratheon">
         <h6 class="center">This has been a Thorpus Maximus Proudction</h6>
         <p class="center">Feel free to edit all the shit you want.</p>
-      </div>
     </footer>
   </body>
 </html>

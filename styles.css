@@ -1,94 +1,68 @@
 * {
   /*border: 1px solid black !important;*/
   box-sizing: border-box;
-  background-color: #fffcbc;
+  /*background-color: #fffcbc;*/
 }
+
+
 @font-face {
   font-family: 'gameofthrones';
   src: url('got.ttf');
 }
 
 /*block level elements get the treatment*/
-.header, .footer, .main  {
-    max-width: 80%;
-    margin: auto;
-    padding: .5em;
-    font-family: 'Didact Gothic', sans-serif;
-  }
+.header {
+
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  padding: .5em;
+  margin-top: .5em;
+  text-align: center;
+}
 
 div {
-  font-family: 'Didact Gothic', sans-serif;
-  font-size: 1.25em;
+  font-size: 1.1em;
 }
 
-/*header and nav shit*/
-header {
-  min-height: 5em;
-  display: flex;
-}
-
-.logo {
-  flex:1;
-  margin-left: 1em;
-}
+main  {
+    max-width: 80%;
+    margin: auto;
+    margin-top: 3em;
+    padding: .5em;
+    font-family: 'Didact Gothic', sans-serif;
+    /*background-color: #fffcbc;*/
+  }
 
 nav {
-  flex: auto;
   display: flex;
   justify-content: center;
+  text-align: center;
+  position: fixed;
+  top: 0px;
   align-items: center;
+  width: 100%;
+  font-size: 1em;
+  font-family: 'Didact Gothic', sans-serif;
+  font-weight: bold;
 }
 
+.logo{
+  flex:5;
+  padding: .5;
 
-nav  ul {
-  flex:1;
-  display:flex;
-  justify-content: center;
-  align-items: center;
 }
 
-nav ul li {
-  flex:1;
-  padding: .5em;
-  text-align: center;
-  border: 2px solid black;
-  height: 100%;
-  text-align: center;
-}
-
-/*dropdown menus from li elements*/
-nav ul li > ul {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: baseline;
-  text-align: center;
-}
-
-nav ul li:hover > ul {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  align-items: baseline;
-  flex: 1;
-  justify-content: center;
-  margin-top: .5em;
-  margin-bottom: 0em;
-  list-style-position: inside;
-}
-
-nav ul li ul li {
-  flex: 1;
-  display: flex;
-  position: relative;
-  left: -10px;
-  top: 0;
-  width: 180%;
+.navItem {
+flex: 1;
+padding:.5em;
 }
 
 /*text elements get the treatment*/
 h1 {
-  font-family: 'gameofthrones';
+  font-family: 'gameofthrones', fantasy, serif;
   font-size: 3em;
   padding-top: .4em;
   padding-bottom: .25em;
@@ -96,7 +70,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'gameofthrones';
+  font-family: 'gameofthrones', fantasy, serif;
   font-size: 2.5em;
   padding-bottom: .25em;
   padding-top: .4em;
@@ -133,7 +107,7 @@ h6{
 
 p {
   font-family: 'Didact Gothic', sans-serif;
-  font-size: 1.25em;
+  font-size: 1.3em;
   line-height: 1.5em;
   padding: .5em;
 }
@@ -141,18 +115,10 @@ p {
 /*This is the grid system*/
 .container {
   display: flex;
-  width: 100%;
-  justify-content: space-around;
   vertical-align: middle;
-  margin: auto;
-  align-content: center;
-  margin-bottom: .5em;
+  margin-bottom: .5em !important;
 }
 
-.spaceBetween {
-  display: flex;
-  justify-content: space-around;
-}
 .col1 {
   flex: 1;
   padding: .5em;
@@ -186,35 +152,253 @@ p {
   padding: .5em;
 }
 
-.col_space1 {
-  flex: 1;
-  margin-left: .5em;
-  margin-right: .5em;
+.space {
+  margin-left: .25em;
+  margin-right: .25em;
   padding: .5em;
 }
-
-.space {
+/*UL and OL schenanigans....*/
+ul {
+  list-style-type: square;
   margin-left: .5em;
-  margin-right: .5em;
   padding: .5em;
+  font-size: 1.25em;
+  line-height: 1.1;
+  font-family: 'Cinzel';
+  font-weight: 600;
+}
+
+ol {
+  list-style-type: lower-roman;
+  margin-left: .5em;
+  padding: .5em;
+  font-size: 1.25em;
+  line-height: 1.1;
+  font-family: 'Cinzel';
+  font-weight: 600;
+}
+
+li {
+  padding: .25em;
+}
+
+/*blockquote and all that jazz (who uses blockquotes?)*/
+blockquote {
+  font-size: 1.25em;
+  font-family: 'Cinzel', sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  width: 80%;
+  padding: 2em;
+  border-left: 5px solid black !important;
+  margin:auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0em 1em 0em 1em;
+}
+
+/*forms and all their stupid non-glory */
+form {
+  width: 80%;
+  margin: auto;
+  padding: .5em;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+legend {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.formParent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  margin: .5em;
+}
+
+label {
+  flex:2;
+  padding: .5em;
+  margin: .5em;
+  background:transparent;
+}
+
+input {
+  flex:3;
+  padding: .5em;
+  margin: .5em;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: .9em;
+  text-align: center;
+  background-color: white;
+  border: 2px solid black;
+}
+
+select {
+  flex:2;
+  background-color: white;
+  border: 2px solid black;
+  font-size: .9em;
+  text-align: center;
+  padding: .5em;
+  margin: .5em;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+textarea {
+  flex:2;
+  background-color: white;
+  text-align: center;
+  margin: .5em;
+  border: 2px solid black;
+  font-size: 1em;
+  text-align: center;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+button, input[type='submit'] {
+  border: 2px solid black;
+  cursor: pointer;
+  text-align: center;
+  margin: auto;
+  width: auto;
+}
+
+button:hover, input[type='submit']:hover {
+  border: 2px solid black;
+}
+
+.smallButt {
+  height: 3em;
+  line-height: 1.5;
+  font-size: .5em;
+}
+
+.mediumButt {
+  height: 3em;
+  line-height: 1.5;
+  font-size: .75em;
+}
+
+.largeButt {
+  height: 3em;
+  line-height: 1.5;
+  font-size: 1.2em;
+}
+
+.buttonDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*tables and stuff*/
+table {
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  font-family: 'Cinzel', sans-serif;
+  font-weight: 600;
+  font-size-adjust: auto;
+}
+
+th {
+  padding: .5em;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  text-decoration: underline;
+  font-size-adjust: auto;
+  border: 2px solid black;
+}
+
+td {
+  padding: .5em;
+  border: 2px solid black;
 }
 
 
 /*to center font within different elements*/
 .center {
   text-align: center;
+  margin: 0 auto;
 }
 
+.underline {
+  border-bottom: 2px solid black;
+}
 /*color system for targaryen*/
 .targaryen {
   background-color: #C9381F;
   color: #090404;
-  /*border-color: #A07875 !important;*/
-  border: 2px solid black;
 }
 
-.targaryen:hover {
+.targaryenHover:hover {
   background-color: #661C15;
   color: #A07875;
-  /*border-color: #A07875;*/
+}
+
+.stark {
+  background-color: #3D3131;
+  color: #A7A3A4;
+}
+
+.starkHover:hover {
+  background-color: #767272;
+  color:white;
+
+}
+
+.lannister {
+  background-color: #A52B1C;
+  color:#F3B32F;
+}
+
+.lannisterHover:hover{
+  background-color: #F3B32F;
+  color: #951A14;
+}
+
+.tyrell {
+  background-color: #364B0E;
+  color: #C4A833;
+}
+
+.tyrellHover:hover {
+  background-color:#A46C04;
+  color: #364B0E;
+}
+
+.martell {
+  background-color: #F95B0C;
+  color: black;
+}
+
+.martellHover:hover {
+  background-color: #FB9E04;
+  color:red;
+}
+
+.baratheon {
+  background-color: #EFB22C;
+  color:black;
+}
+
+.baratheonHover:hover {
+  background-color: #946E23;
+  color: #FBEAC7;
+}
+
+.greyjoy {
+  background-color: #201D1B;
+  color: #BDA24A;
+}
+
+.greyjoyHover:hover {
+  background-color: grey;
+  color:black;
 }

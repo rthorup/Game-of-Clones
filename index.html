@@ -7,41 +7,46 @@
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game of Clones Framework</title>
   </head>
   <body>
       <nav class="stark">
-        <div class='col5 stark'>Logo</div>
-          <div class='col1 targaryen targaryenHover'>Item1</div>
-          <div class='col1 tyrell tyrellHover'>Item2</div>
-          <div class='col1 martell martellHover'>Item3</div>
-          <div class='col1 greyjoy greyjoyHover'>Item4</div>
-          <div class='col1 lannister lannisterHover'>Item5</div>
+          <div class='logo stark'>Logo</div>
+          <div class='hamburger stark starkHover center'>Menu</div>
+          <div class='navItem targaryen targaryenHover'>Item1</div>
+          <div class='navItem tyrell tyrellHover'>Item2</div>
+          <div class='navItem martell martellHover'>Item3</div>
+          <div class='navItem greyjoy greyjoyHover'>Item4</div>
+          <div class='navItem lannister lannisterHover'>Item5</div>
       </nav>
-
-<!--
-      <div class='dropNav'>
-        <div class='dropDownItem navItem stark starkHover'>Drop Item 1</div>
-        <div class='dropDownItem navItem stark starkHover'>Drop Item 2</div>
-        <div class='dropDownItem navItem stark starkHover'>Drop Item 3</div>
-      </div> -->
     <main class="main">
-      <h4 class="center">Hear Ye! Hear Ye!</h4>
-      <p>This here CSS framework with a Game of Thrones vibe.  All fonts and colors are meant to give a real Westeros feel.  The following is a brief intro in how to use this stylesheet.  Let us begin our Epic Quest of Understanding!</p>
-
-      <h4 class='underline'>Page elements</h4>
-      <p>The main elements provided are the nav, main, and footer. Anything included in the nav element will be fixed to the top of the page like above. Also, the nav and footer elements are already set up in the flex system so see the grid guidelines below to figure out how they work.</p>
-      <p>The main element gives some styles to the page including the width. Include all of your elements inside the main tags to get the stylings that this page has.</p>
-      <h4 class='underline'>House Colors</h4>
-      <p>There are seven color schemes built in for the seven kingdoms: Targaryen, Stark, Lannister, Baratheon, Greyjoy, Tyrell and Martell.  In order to use the pre-set color scheme, simply add the lowercase family name to the element.  So a div with a class of 'targaryen would look like this:</p>
+      <div class ='container column'>
+        <h1 class="center">Ye Olde Framework</h1>
+        <p>This here CSS framework with a Game of Thrones vibe.  All fonts and colors are meant to give a real Westeros feel.  The following is a brief intro in how to use this stylesheet.  Let us begin our Epic Quest of Understanding!</p>
+      </div>
+      <div class='container column'>
+        <h4 class='underline'>Page elements</h4>
+        <p>The main elements provided are the nav, main, and footer. Anything included in the nav element will be fixed to the top of the page like above. Also, the nav and footer elements are already set up in the flex system so see the grid guidelines below to figure out how they work.</p>
+        <p>The main element gives some styles to the page including the width. Include all of your elements inside the main tags to get the stylings that this page has.</p>
+      </div>
+      <div class='container column'>
+        <h4 class='underline'>House Colors</h4>
+        <p>There are seven color schemes built in for the seven kingdoms: Targaryen, Stark, Lannister, Baratheon, Greyjoy, Tyrell and Martell.  In order to use the pre-set color scheme, simply add the lowercase family name to the element.  So a div with a class of 'targaryen would look like this:</p>
+      </div>
       <div class='targaryen'>
         <h6 class='center'>House Targaryen</h6>
       </div>
-      <p>And a div with a class of 'tyrell' would end up looking like this:</p>
+      <div class='container'>
+        <p>And a div with a class of 'tyrell' would end up looking like this:</p>
+      </div>
       <div class='tyrell'>
         <h6 class='center'>House Tyrell</h6>
       </div>
-      <p>But wait! There's more!  Each house also has preset hover rules.  So any element you want to change on hover, such as a nav bar item or button, you can add an additional class of the family name + Hover.  So in our previous example we could add a class 'targaryenHover' and 'tyrellHover' to get the desired effect. You can see how each hose looks below</p>
+      <div class="container">
+        <p>But wait! There's more!  Each house also has preset hover rules.  So any element you want to change on hover, such as a nav bar item or button, you can add an additional class of the family name + Hover.  So in our previous example we could add a class 'targaryenHover' and 'tyrellHover' to get the desired effect. You can see how each hose looks below</p>
+      </div>
       <div class='container'>
         <p class='col1 targaryen targaryenHover center'>Targaryen</p>
         <p class='col1 stark starkHover center'>Stark</p>
@@ -52,15 +57,17 @@
         <p class='col1 martell martellHover center'>Martell</p>
       </div>
       <br></br>
-      <h4 class='underline'>The Almighty Grid System</h4>
-      <p>This framework is based off of the flexbox model.  If you don't know what that is, find another framework.  But really, just look it up.  Almost all the elements need to be wrapped in divs and given class names in order to display correctly on the page.  Since we use flexbox, the system's column widths are proportional. Just add a div with the class of 'container'.  If you want each column to be the same size, add the class 'col1' to each item like below.</p>
+      <div class="container column">
+        <h4 class='underline'>The Almighty Grid System</h4>
+        <p>This framework is based off of the flexbox model.  If you don't know what that is, find another framework.  But really, just look it up.  Almost all the elements need to be wrapped in divs and given class names in order to display correctly on the page.  Since we use flexbox, the system's column widths are proportional. Just add a div with the class of 'container'.  If you want each column to be the same size, add the class 'col1' to each item like below.</p>
+      </div>
       <div class="container center">
         <div class="col1 stark starkHover">six</div>
         <div class="col1 stark starkHover">six</div>
         <div class="col1 stark starkHover">six</div>
         <div class="col1 stark starkHover">six</div>
         <div class="col1 stark starkHover">six</div>
-      <div class="col1 stark starkHover">six</div>
+        <div class="col1 stark starkHover">six</div>
       </div>
       <div class="container center">
         <div class="col1 targaryen targaryenHover">five</div>
@@ -74,19 +81,25 @@
         <div class="col1 tyrell tyrellHover">three</div>
         <div class="col1 tyrell tyrellHover">three</div>
       </div>
-      <p>If you want to have columns of varying width, choose between col2 - col8.  Keep in mind that the sizing is proportional so a col4 and col2 would be rougly 66% and 33% like so:
+      <div class="container">
+        <p>If you want to have columns of varying width, choose between col2 - col8.  Keep in mind that the sizing is proportional so a col4 and col2 would be rougly 66% and 33% like so:
+      </div>
       <div class="container center">
         <div class="col4 baratheon baratheonHover">four</div>
         <div class="col2 baratheon baratheonHover">two</div>
       </div>
-      <p>Or you could do col8 and col2 for a 20% and 80%.
+      <div class="container">
+        <p>Or you could do col8 and col2 for a 20% and 80%.
+      </div>
       <div class="container center">
         <div class="col8 lannister lannisterHover">eight</div>
         <div class="col2 lannister lannisterHover">two</div>
       </div>
-      <p>Again, these are proportional so col8 and col8 would result in a 50%/50%. You get the idea....</p>
-      <h4>Gutters</h4>
-      <p>If you want some gutters around your columns add a special class of 'space' so it will look like this:</p>
+      <div class="container column">
+        <p>Again, these are proportional so col8 and col8 would result in a 50%/50%. You get the idea....</p>
+        <h4>Gutters</h4>
+        <p>If you want some gutters around your columns add a special class of 'space' so it will look like this:</p>
+      </div>
       <div class="container center">
         <div class="col1 space greyjoy greyjoyHover">six</div>
         <div class="col1 space greyjoy greyjoyHover">six</div>
@@ -111,17 +124,21 @@
         <div class="col2 space greyjoy greyjoyHover">four</div>
       </div>
       <br></br>
-      <h4 class='underline'>Ye Olde Headings and fonts</h6>
-      <p> The H1 and H2 headings are 'Game of Thrones' font created by Charlie Samways.  Free for personal use but contact him if you want to use it in any other project.  The rest of the headings are 'Cinzel' bold and the main text for the page is in 'Diadact Gothic'. Below is some demonstrations on how they all look. Nothing speclail needs to be added.</p>
-      <h1>Heading One</h1>
-      <h2>Heading Two</h2>
-      <h3>Heading Three</h3>
-      <h4>Heading Four</h4>
-      <h5>Heading Five</h5>
-      <h6>Heading Six</h6>
-      <br></br>
-      <h4 class='underline'>Example paragraphs and text elements</h6>
-      <p>Twee raw denim <a class='tarygaryen'href="#">wayfarers</a>, XOXO four dollar toast vegan helvetica literally swag. Mumblecore stumptown poutine cardigan, kogi keytar occupy plaid meggings beard bitters distillery sartorial aesthetic pitchfork. Pinterest yuccie helvetica, church-key dreamcatcher marfa artisan. Chillwave letterpress church-key gluten-free direct trade keytar squid palo santo. Offal hoodie poutine, banjo whatever meh man braid leggings taxidermy selfies single-origin coffee mlkshk bicycle rights lomo venmo. Cardigan four dollar toast sustainable migas yr. Organic tilde 8-bit, lo-fi sustainable literally keytar dreamcatcher food truck tofu. Wolf lomo hella yuccie chambray tattooed. Viral fanny pack pabst hashtag prism shaman vape asymmetrical. Cornhole enamel pin banh mi iceland offal air plant tofu pour-over chartreuse lumbersexual tousled.</p>
+      <div class="container column">
+        <h4 class='underline'>Ye Olde Headings and fonts</h4>
+        <p> The H1 and H2 headings are 'Game of Thrones' font created by Charlie Samways.  Free for personal use but contact him if you want to use it in any other project.  The rest of the headings are 'Cinzel' bold and the main text for the page is in 'Diadact Gothic'. Below is some demonstrations on how they all look. Nothing speclail needs to be added.</p>
+        <h1>Heading One</h1>
+        <h2>Heading Two</h2>
+        <h3>Heading Three</h3>
+        <h4>Heading Four</h4>
+        <h5>Heading Five</h5>
+        <h6>Heading Six</h6>
+        <br></br>
+      </div>
+      <div class="container column">
+        <h4 class='underline'>Example paragraphs and text elements</h6>
+        <p>Twee raw denim <a class='tarygaryen'href="#">wayfarers</a>, XOXO four dollar toast vegan helvetica literally swag. Mumblecore stumptown poutine cardigan, kogi keytar occupy plaid meggings beard bitters distillery sartorial aesthetic pitchfork. Pinterest yuccie helvetica, church-key dreamcatcher marfa artisan. Chillwave letterpress church-key gluten-free direct trade keytar squid palo santo. Offal hoodie poutine, banjo whatever meh man braid leggings taxidermy selfies single-origin coffee mlkshk bicycle rights lomo venmo. Cardigan four dollar toast sustainable migas yr. Organic tilde 8-bit, lo-fi sustainable literally keytar dreamcatcher food truck tofu. Wolf lomo hella yuccie chambray tattooed. Viral fanny pack pabst hashtag prism shaman vape asymmetrical. Cornhole enamel pin banh mi iceland offal air plant tofu pour-over chartreuse lumbersexual tousled.</p>
+      </div>
       <ul>
         <li>List item one</li>
         <li>List item two</li>
@@ -132,22 +149,26 @@
         <li>List item two</li>
         <li>List item three</li>
       </ol>
+      <div class="container column">
         <h2>Section Title</h2>
         <h3>Section subtitle</h3>
         <p>Intelligentsia mustache umami, YOLO migas freegan austin adaptogen forage hexagon 3 wolf moon thundercats fanny pack venmo. Leggings migas pabst, semiotics cray iPhone hammock. Kombucha af messenger bag man braid tumeric asymmetrical vape gluten-free narwhal portland pabst fanny pack jean shorts franzen. Jean shorts ugh truffaut next level cloud bread roof party.</p>
         <h2>Section Title</h2>
         <h3>Section subtitle</h3>
         <p>Trust fund vinyl semiotics sustainable cred swag YOLO selvage humblebrag pinterest try-hard. Authentic cronut subway tile lomo knausgaard vaporware. Offal locavore waistcoat, dreamcatcher yr gluten-free subway tile crucifix pop-up distillery asymmetrical cronut brooklyn. Pok pok keytar shaman pitchfork selvage. Tattooed kogi forage unicorn.</p>
-        <div>
+      </div>
+      <div>
           <h4 class='underline'>Blockquotes</h4>
-        </div>
+      </div>
+      <div class="container column">
         <p>Blockquotes don't need anything special except to use the normal blockquote tags.  Looks like this:
       <blockquote cite="http://www.worldwildlife.org/who/index.html">For 50 years, WWF has been protecting the future of nature.
-  The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</blockquote>
+          The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</blockquote>
+      </div>
       <div>
         <h4 class='underline'>Forms, fields, labels, inputs and such</h4>
+        <p>The form element is preset with a width of 80%.  You can override that if you want but who wants full page fields?  The labels and inputs are set up on the flexbox model as well so please put your label and input inside a parent div with the class name of 'formParent'.  This will give your elements a nice clean look like below.
       </div>
-      <p>The form element is preset with a width of 80%.  You can override that if you want but who wants full page fields?  The labels and inputs are set up on the flexbox model as well so please put your label and input inside a parent div with the class name of 'formParent'.  This will give your elements a nice clean look like below.
       <form class="stark">
         <fieldset>
           <legend class="stark">Form Fields</legend>
@@ -164,14 +185,18 @@
         <input type="submit" class="stark starkHover" value="Submit form">
       </form>
       <br></br>
-      <h4 class='underline'>Buttons</h4>
-      <p>There are three different sized buttons you can use in this framework: small, meduium and large.  In order to get the following styles, add the class of 'smallButt', 'mediumButt', or 'largeButt'.</p>
-      <div class="buttonDisplay">
-      <button class="smallButt targaryen targaryenHover">Small Button</button> <button class="mediumButt targaryen targaryenHover">Medium Button</button> <button class="largeButt targaryen targaryenHover">Large Button</button>
+      <div class="container column">
+        <h4 class='underline'>Buttons</h4>
+        <p>There are three different sized buttons you can use in this framework: small, meduium and large.  In order to get the following styles, add the class of 'smallButt', 'mediumButt', or 'largeButt'.</p>
+      </div>
+      <div class="conatiner column buttonDisplay">
+        <button class="smallButt targaryen targaryenHover">Small Button</button> <button class="mediumButt targaryen targaryenHover">Medium Button</button> <button class="largeButt targaryen targaryenHover">Large Button</button>
       </div>
       <br></br>
-      <h4 class='underline'>Tables</h4>
-      <p>Tables come pre-stylized as well. Nothing special needs to be added.
+      <div class="container column">
+        <h4 class='underline'>Tables</h4>
+        <p>Tables come pre-stylized as well. Nothing special needs to be added.
+      </div>
       <table>
         <tr class="lannister">
           <th class="lannister">Company</th>
@@ -210,9 +235,8 @@
         </tr>
       </table>
     </main>
-    <footer class="footer baratheon">
-        <h6 class="center">This has been a Thorpus Maximus Proudction</h6>
-        <p class="center">Feel free to edit all the shit you want.</p>
+    <footer class="baratheon">
+        <h6 class="col1 center">This has been a Thorpus Maximus Proudction</h6>
     </footer>
   </body>
 </html>

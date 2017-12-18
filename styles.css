@@ -23,10 +23,6 @@
   text-align: center;
 }
 
-div {
-  font-size: 1.1em;
-}
-
 main  {
     max-width: 80%;
     margin: auto;
@@ -37,22 +33,28 @@ main  {
   }
 
 nav {
+  width: 100%;
   display: flex;
   justify-content: center;
   text-align: center;
   position: fixed;
   top: 0px;
   align-items: center;
-  width: 100%;
   font-size: 1em;
   font-family: 'Didact Gothic', sans-serif;
   font-weight: bold;
 }
-
+.hamburger{
+  display: none;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: .5em;
+  text-align: center;
+}
 .logo{
   flex:5;
   padding: .5;
-
 }
 
 .navItem {
@@ -115,10 +117,14 @@ p {
 /*This is the grid system*/
 .container {
   display: flex;
+  justify-content: center;
   vertical-align: middle;
   margin-bottom: .5em !important;
 }
 
+.column {
+  flex-direction: column;
+}
 .col1 {
   flex: 1;
   padding: .5em;
@@ -160,6 +166,7 @@ p {
 /*UL and OL schenanigans....*/
 ul {
   list-style-type: square;
+  list-style-position: inside;
   margin-left: .5em;
   padding: .5em;
   font-size: 1.25em;
@@ -170,6 +177,7 @@ ul {
 
 ol {
   list-style-type: lower-roman;
+  list-style-position: inside;
   margin-left: .5em;
   padding: .5em;
   font-size: 1.25em;
@@ -276,18 +284,21 @@ button:hover, input[type='submit']:hover {
   height: 3em;
   line-height: 1.5;
   font-size: .5em;
+  margin: .5em;
 }
 
 .mediumButt {
   height: 3em;
   line-height: 1.5;
   font-size: .75em;
+  margin: .5em;
 }
 
 .largeButt {
   height: 3em;
   line-height: 1.5;
   font-size: 1.2em;
+  margin: .5em;
 }
 
 .buttonDisplay {
@@ -401,4 +412,166 @@ td {
 .greyjoyHover:hover {
   background-color: grey;
   color:black;
+}
+
+@media (max-width: 768px) {
+.logo {
+    display: none;
+}
+
+h1 {
+  font-size: 2.5em;
+  }
+
+h2 {
+  font-size: 2em;
+  }
+
+h3{
+  font-size: 2.25em;
+  }
+
+h4 {
+  font-size: 2em;
+  }
+
+h5 {
+  font-size: 1.75em;
+  }
+
+h6{
+  font-size: 1.5em;
+  }
+p {
+  font-size: 1.1em;
+  line-height: 1.25;
+}
+.container {
+  flex-wrap: wrap;
+}
+.space {
+  margin-top: .75em;
+}
+.col1 {
+  min-width: 150px;
+}
+.formParent {
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-width: 300px;
+}
+form {
+  min-width: 345px;
+}
+label {
+  flex:1;
+  padding: .25em;
+  margin: 0;
+}
+.nav .col1 {
+  min-width: 50px;
+}
+table {
+  max-width: 80%
+  margin: auto;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  font-size: 1em;
+  font-size-adjust: auto;
+}
+
+th {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size-adjust: auto;
+  border: 2px solid black;
+}
+td {
+  border: 2px solid black;
+}
+
+}
+@media (max-width: 550px) {
+  .navItem {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+    text-align: center;
+  }
+  .logo {
+    display: none;
+  }
+}
+@media (max-width: 413px) {
+  main {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2.2em;
+    padding: 0;
+  }
+  .col1 {
+    min-width: 100px;
+  }
+  h1 {
+    font-size: 2.25em;
+    }
+
+  h2 {
+    font-size: 1.75em;
+    }
+
+  h3{
+    font-size: 2em;
+    }
+
+  h4 {
+    font-size: 1.75em;
+    }
+
+  h5 {
+    font-size: 1.5em;
+    }
+
+  h6{
+    font-size: 1.25em;
+    }
+  p {
+    padding: .5em;
+  }
+  blockquote {
+    max-width: 100%;
+  }
+  form {
+    min-width: 50px;
+    max-width: 225px;
+  }
+  .formParent {
+    min-width: 50px;
+    max-width: 225px;
+  }
+  input {
+    max-width: 150px;
+    min-width: 50px;
+  }
+  textarea {
+    max-width: 175px;
+  }
+  table {
+    width: 100%
+    margin-top: .5em;
+    margin-bottom: .5em;
+    margin-left: 0;
+    font-size: .75em;
+  }
+
+  th {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size-adjust: auto;
+    border: 1px solid black;
+  }
+  td {
+    border: 1px solid black;
+  }
 }
